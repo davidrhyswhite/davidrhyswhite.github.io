@@ -236,13 +236,10 @@ section[role="main"] {
   background-color: #fff;
   margin: 50px 0 0;
   padding: 1px 45px;
-  width: 560px;
   float: left;
 }
 
 section[role="sidebar"] {
-  margin: 50px 0 0 22px;
-  width: 308px;
   float: left;
 }
 
@@ -253,14 +250,7 @@ section[role="sidebar"] section {
   margin-bottom: 22px;
 }
 
-section[role="sidebar"] p {
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.container {
-  width: 980px;
-  margin: 0 auto;
+.container {  margin: 0 auto;
 }
 
 #background_canvas {
@@ -272,15 +262,12 @@ section[role="sidebar"] p {
 **************************/
 
 #social ul {
-  margin: 0 0 0 18px;
   padding: 0;
 }
 
 #social ul li {
-  margin: 0 15px 0 0;
   padding: 0;
   display: inline-block;
-  font-size: 28px;
 }
 
 #social ul li.last {
@@ -317,3 +304,93 @@ code {
   padding: 35px 45px;
 }
 
+/**************************
+* Responsive
+**************************/
+
+@media only screen and (min-width: 320px) {
+
+  section[role="sidebar"] section {
+    background-color: #494f57;
+  }
+  section[role="sidebar"] section h3,
+  section[role="sidebar"] section h4,
+  section[role="sidebar"] section p {
+    color: #fff;
+  }
+  #social {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  #social ul {
+    margin: 0 0 24px 0;
+    padding: 0;
+  }
+
+  #social ul li {
+    margin: 0 33px 0 0;
+    font-size: 35px;
+  }
+  #social ul li:last {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .container {
+    width: 768px;
+  }
+
+  section[role="sidebar"] {
+    margin-top: 50px;
+    width: 768px;
+  }
+
+  section[role="sidebar"] section {
+    background-color: #494f57;
+  }
+
+  section[role="sidebar"] section h3,
+  section[role="sidebar"] section h4,
+  section[role="sidebar"] section p {
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 980px) {
+
+  .container {
+    width: 980px;
+  }
+
+  article[role="main"],
+  section[role="main"] {
+    width: 560px;
+  }
+
+  section[role="sidebar"] {
+    margin: 50px 0 0 22px;
+    width: 308px;
+  }
+
+  section[role="sidebar"] p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  #social {
+    width: 308px;
+    margin: 0 auto;
+  }
+
+  #social ul {
+    margin: 0 0 0 18px;
+    padding: 0;
+  }
+
+  #social ul li {
+    margin: 0 30px 0 0;
+    font-size: 28px;
+  }
+}
