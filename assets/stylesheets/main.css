@@ -1,3 +1,9 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+ }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -50,21 +56,19 @@ p {
 }
 
 p + p {
-  margin-top: 2.2em;
+  margin-top: 2em;
 }
 
 
 h1, h2 {
-  font-size: 4.2em;
   font-weight: 300;
-  line-height: 1.15em;
   margin-bottom: 0.625em;
 }
 
 h3, h4 {
-  font-size: 2.2em;
+  font-size: 22px;
   font-weight: normal;
-  line-height: 1.15em;
+  line-height: 18px;
   margin-bottom: 0.625em;
 }
 
@@ -310,6 +314,19 @@ code {
 
 @media only screen and (min-width: 320px) {
 
+  h1, h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .container {
+    width: 100%;
+  }
+
+  section[role="main"],
+  article[role="main"] {
+    width: 100%;
+  }
+
   section[role="sidebar"] section {
     background-color: #494f57;
   }
@@ -318,6 +335,7 @@ code {
   section[role="sidebar"] section p {
     color: #fff;
   }
+
   #social {
     width: 320px;
     margin: 0 auto;
@@ -343,6 +361,11 @@ code {
     width: 768px;
   }
 
+  section[role="main"],
+  article[role="main"] {
+    width: 768px;
+  }
+
   section[role="sidebar"] {
     margin-top: 50px;
     width: 768px;
@@ -360,13 +383,18 @@ code {
 }
 @media only screen and (min-width: 980px) {
 
+  h1, h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
   .container {
     width: 980px;
   }
 
   article[role="main"],
   section[role="main"] {
-    width: 560px;
+    width: 650px;
   }
 
   section[role="sidebar"] {
