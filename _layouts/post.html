@@ -1,12 +1,21 @@
 ---
 layout: default
 ---
-<article role="main">
+<article itemscope itemtype="http://schema.org/TechArticle" role="main">
   <header>
-    <h2>{{ page.title }}</h2>
-    <p class="info"><i><strong>Date:</strong> {{ page.date | date: "%d %B %Y" }} - <strong>Tags:</strong> {{ page.tags | join: ", " }}</i></p>
+    <h1 itemprop="name">{{ page.title }}</h1>
+    <p class="info">
+      <strong>Date:</strong>
+      <time itemprop="datePublished" datetime="{{page.date | date: '%Y-%M-%S'}}">{{ page.date | date: "%d %B %Y" }}</time>
+       -
+      <strong>Tags:</strong>
+      <span itemprop="articleSection">{{ page.tags | join: ", " }}</span>
+       -
+      <strong>Read time:</strong>
+      <meta itemprop="wordCount" content="{{ content | count_words }}" />
+      {{ content | word_count_to_human }}
+
+    </p>
   </header>
-
-  {{ content }}
-
+  <section itemprop="articleBody">{{ content }}</section>
 </article>
