@@ -12,8 +12,7 @@ layout: default
       <span itemprop="articleSection">{{ page.tags | join: ", " }}</span>
        -
       <strong>Read time:</strong>
-      <meta itemprop="wordCount" content="{{ content | count_words }}" />
-      {{ content | word_count_to_human }}
+      <meta itemprop="wordCount" content="{{ content | number_of_words }}" />
 
     </p>
   </header>

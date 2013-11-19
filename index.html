@@ -4,9 +4,18 @@ title: The website of David Rhys White
 ---
 <section id="posts" role="main">
   {% for post in site.posts %}
-  <article class="post">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="info"><i><strong>Date:</strong> {{ post.date | date: "%d %B %Y" }} - <strong>Tags:</strong> {{ post.tags | join: ", " }}</i></p>
+  <article itemscope itemtype="http://schema.org/TechArticle" class="post">
+    <h2 itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p class="info">
+      <strong>Date:</strong>
+      <time itemprop="datePublished" datetime="{{post.date | date: '%Y-%M-%S'}}">{{ post.date | date: "%d %B %Y" }}</time>
+       -
+      <strong>Tags:</strong>
+      <span itemprop="articleSection">{{ post.tags | join: ", " }}</span>
+       -
+      <strong>Read time:</strong>
+      <meta itemprop="wordCount" content="{{ post.content | number_of_words }}" />
+    </p>
   </article>
   {% endfor %}
 </section>
