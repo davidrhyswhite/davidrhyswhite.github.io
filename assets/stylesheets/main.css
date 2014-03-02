@@ -1,4 +1,4 @@
-*, *:before, *:after {
+  *, *:before, *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -73,7 +73,7 @@ h3, h4 {
 }
 
 p + h3, ol + h3, ul + h3 {
-  margin-top: 2.2em;
+  margin-top: 1em;
 }
 
 ul.inline {
@@ -236,6 +236,10 @@ section[role="sidebar"] section {
   display: none;
 }
 
+footer {
+  display: none;
+}
+
 /**************************
 * Social
 **************************/
@@ -283,6 +287,10 @@ code {
   background-color: #494f57;
   margin: 0 -45px;
   padding: 35px 45px;
+}
+
+.highlight code.text {
+  color: #eee;
 }
 
 /**************************
@@ -393,6 +401,18 @@ code {
   section[role="sidebar"] p {
     font-size: 14px;
     line-height: 24px;
+  }
+
+  footer {
+    width: 650px;
+    display: inline-block;
+    padding: 5px 0 0 0;
+    margin-bottom: 5px;
+  }
+
+  footer p {
+    font-size: 13px;
+    line-height: 23px;
   }
 
   #social {
